@@ -13,13 +13,13 @@ onready var sprite = self.get_node("Sprite")
 
 func get_input():
 	velocity.x = 0
-	if is_on_floor() and Input.is_action_just_pressed('jump'):
+	if is_on_floor() and (Input.is_action_just_pressed('jump') or Input.is_key_pressed(KEY_W)):
 		velocity.y = jump_speed
-	if Input.is_action_pressed('right'):
+	if Input.is_action_pressed('right') or Input.is_key_pressed(KEY_D):
 		velocity.x += speed
-	if Input.is_action_pressed('left'):
+	if Input.is_action_pressed('left') or Input.is_key_pressed(KEY_A):
 		velocity.x -= speed
-
+		
 func _physics_process(delta):
 	velocity.y += delta * GRAVITY
 	get_input()

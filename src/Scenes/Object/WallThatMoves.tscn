@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/GameJam Asset/craftpix-net-481532-free-medieval-tileset-pixel-art-pack/PNG/Objects/walls1.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20.9642, 126.926 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 3, 4 )
+texture = ExtResource( 1 )
+offset = Vector2( 3, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

@@ -10,4 +10,4 @@ func _on_Area_Trigger_body_entered(body):
 		if (Global.lives == 0):
 			get_tree().change_scene(str("res://Scenes/GameOver.tscn"))
 		else:
-			get_tree().change_scene(str("res://Scenes/" + sceneName + ".tscn"))
+			get_tree().change_scene(str("res://Scenes/Level/" + sceneName + ".tscn"))
