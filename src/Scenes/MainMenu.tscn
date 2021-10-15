@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Fonts/tulisan.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Assets/Fonts/judul.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scenes/LinkButton.gd" type="Script" id=3]
-[ext_resource path="res://Assets/kenney_platformerpack/Spritesheets/spritesheet_alien.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GameJam Asset/craftpix-891178-free-3-character-sprite-sheets-pixel-art/3 SteamMan/SteamMan_hurt.png" type="Texture" id=4]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchor_right = 1.0
@@ -24,22 +24,22 @@ margin_right = 1730.0
 margin_bottom = 640.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-margin_right = 838.0
+margin_right = 831.0
 margin_bottom = 560.0
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
-margin_right = 838.0
+margin_right = 831.0
 margin_bottom = 122.0
 custom_fonts/font = ExtResource( 2 )
-text = "Alien Jalan-Jalan"
+text = "Protect The Hero"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
 margin_top = 126.0
-margin_right = 838.0
+margin_right = 831.0
 margin_bottom = 192.0
 
 [node name="LinkButton" type="LinkButton" parent="HBoxContainer/VBoxContainer/VBoxContainer2"]
-margin_right = 838.0
+margin_right = 831.0
 margin_bottom = 31.0
 custom_fonts/font = ExtResource( 1 )
 shortcut_in_tooltip = false
@@ -49,20 +49,23 @@ scene_to_load = "Level 1"
 
 [node name="LinkButton2" type="LinkButton" parent="HBoxContainer/VBoxContainer/VBoxContainer2"]
 margin_top = 35.0
-margin_right = 838.0
+margin_right = 831.0
 margin_bottom = 66.0
 custom_fonts/font = ExtResource( 1 )
 text = "Stage Select"
 
 [node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/VBoxContainer"]
 margin_top = 196.0
-margin_right = 838.0
-margin_bottom = 452.0
+margin_right = 831.0
+margin_bottom = 244.0
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/CenterContainer"]
-margin_left = 163.0
-margin_right = 675.0
-margin_bottom = 256.0
+anchor_left = -0.109507
+anchor_right = -0.109507
+margin_left = 343.0
+margin_right = 487.0
+margin_bottom = 48.0
+rect_scale = Vector2( 4, 4 )
 texture = ExtResource( 4 )
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/VBoxContainer2/LinkButton" to="HBoxContainer/VBoxContainer/VBoxContainer2/LinkButton" method="_on_LinkButton_pressed"]
